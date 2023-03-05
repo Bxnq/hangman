@@ -28,8 +28,8 @@ onMounted(() => {
 function check(letter) {
     if (word.value.toUpperCase().indexOf(letter) == -1) {
         usedLetters.value.push(letter);
-        this.fails++;
-        if (this.fails > 8) {
+        fails++;
+        if (fails > 8) {
             gamestate.value = "GAMEEND";
             router.push("/gameend");
         }
